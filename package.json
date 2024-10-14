@@ -1,0 +1,40 @@
+{
+  "name": "@qnaplus/library-template",
+  "version": "1.0.0",
+  "description": "Template for creating new libraries",
+  "main": "dist/index.js",
+  "repository": "git@github.com:qnaplus/library-template.git",
+  "author": "Battlesquid <25509915+Battlesquid@users.noreply.github.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "build:clean": "yarn clean && yarn build",
+    "clean": "rimraf dist",
+    "reset": "yarn clean && rimraf node_modules",
+    "lint": "eslint src/**",
+    "lint:fix": "yarn lint --fix",
+    "neat": "yarn lint:fix && yarn pretty",
+    "pretty": "prettier . --write",
+    "pretty:check": "prettier . --check"
+  },
+  "dependencies": {
+    "pino": "^9.4.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.12.0",
+    "eslint": "^9.12.0",
+    "pino-pretty": "^11.2.2",
+    "prettier": "^3.3.3",
+    "rimraf": "^6.0.1",
+    "typescript": "5.5.4",
+    "typescript-eslint": "^8.9.0"
+  },
+  "volta": {
+    "node": "20.11.0",
+    "yarn": "1.22.22"
+  },
+  "files": [
+    "dist"
+  ]
+}

@@ -1,0 +1,19 @@
+name: pr checks
+
+on:
+    pull_request:
+        types: [opened, reopened, edited, synchronize]
+        branches:
+            - master
+
+jobs:
+    neat:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: 20.11.0
+            - run: yarn install --frozen-lockfile
+            - run: yarn lint
+            - run: yarn pretty:check
