@@ -1,3 +1,3 @@
-# library-template
+# scraper-strategies
 
-Template for creating new libraries.
+Request stategies for @qnaplus/scraper
