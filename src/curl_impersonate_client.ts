@@ -9,7 +9,7 @@ import {
     RequestPreset,
     SafariPresetVersion
 } from "@qnaplus/node-curl-impersonate";
-import { FetchClient, FetchClientResponse } from "./fetch_client";
+import { FetchClient, FetchClientResponse } from "@qnaplus/scraper";
 
 export class CurlImpersonateScrapingClient extends FetchClient<FetchClientResponse> {
     async fetch(url: string): Promise<FetchClientResponse> {
@@ -17,6 +17,8 @@ export class CurlImpersonateScrapingClient extends FetchClient<FetchClientRespon
         const badStatusCodes = [403];
         let latestResponse: FetchClientResponse = { ok: false, body: "", status: -1, url: "" };
 
+        // TODO: when a bad status code is not recieved, cache the preset that was used.
+        // Continue using that preset until failure, then search again for another working preset.
         for (const browser of browsers) {
             for (const version of Object.keys(BrowserPresets[browser.name])) {
                 const { response, details } = await this.doPresetRequest(url, {
