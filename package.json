@@ -21,9 +21,9 @@
     },
     "dependencies": {
         "@qnaplus/node-curl-impersonate": "^1.0.0",
-        "cycletls": "^1.0.26",
-        "header-generator": "^2.1.56",
-        "pino": "^9.4.0"
+        "cycletls": "^1.0.27",
+        "header-generator": "^2.1.62",
+        "pino": "^9.6.0"
     },
     "devDependencies": {
         "@eslint/js": "^9.12.0",
