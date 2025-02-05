@@ -1,7 +1,7 @@
 import initCycleTLS, { CycleTLSClient } from "cycletls";
 import { HeaderGenerator } from "header-generator";
 import { Logger } from "pino";
-import { FetchClient, FetchClientResponse } from "./fetch_client";
+import { FetchClient, FetchClientResponse } from "@qnaplus/scraper";
 
 export type CycleTLSResponse = FetchClientResponse;
 
