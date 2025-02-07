@@ -1,6 +1,6 @@
 {
     "name": "@qnaplus/scraper-strategies",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "description": "Request stategies for @qnaplus/scraper",
     "main": "dist/index.js",
     "repository": {
