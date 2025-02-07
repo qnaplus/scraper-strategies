@@ -1,6 +1,6 @@
 {
     "name": "@qnaplus/scraper-strategies",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "description": "Request stategies for @qnaplus/scraper",
     "main": "dist/index.js",
     "repository": {
@@ -21,6 +21,7 @@
     },
     "dependencies": {
         "@qnaplus/node-curl-impersonate": "^1.0.0",
+        "@qnaplus/scraper": "^2.0.2",
         "cycletls": "^1.0.27",
         "form-data": "^4.0.1",
         "header-generator": "^2.1.62",
@@ -28,7 +29,6 @@
     },
     "devDependencies": {
         "@eslint/js": "^9.12.0",
-        "@qnaplus/scraper": "^2.0.2",
         "eslint": "^9.12.0",
         "pino-pretty": "^11.2.2",
         "prettier": "^3.3.3",
