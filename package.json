@@ -1,6 +1,6 @@
 {
     "name": "@qnaplus/scraper-strategies",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "description": "Request stategies for @qnaplus/scraper",
     "main": "dist/index.js",
     "repository": {
@@ -22,6 +22,7 @@
     "dependencies": {
         "@qnaplus/node-curl-impersonate": "^1.0.0",
         "cycletls": "^1.0.27",
+        "form-data": "^4.0.1",
         "header-generator": "^2.1.62",
         "pino": "^9.6.0"
     },
