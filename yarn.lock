@@ -235,10 +235,10 @@
   resolved "https://registry.npmjs.org/@qnaplus/node-curl-impersonate/-/node-curl-impersonate-1.0.0.tgz#0f27990aaceb818b761956292fedc6fd4190a8e0"
   integrity sha512-K+oVdMWh0OAc4wLyhSkmG0EiWqLs/BAyUWfYIIu5Xc3qw66vtu3beblgecPjyeMtyFv2NnYTJyJWWqBrNhkc4Q==
 
-"@qnaplus/scraper@^2.0.2":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@qnaplus/scraper/-/scraper-2.0.2.tgz#b44a97aa999fcd870672124052dcfefd5a4de4f6"
-  integrity sha512-sLvzCIJ6XM5R/Ns6BbPR+YE+9mHfESbrjpkLRXYOg/osrfPOJBRXvVSy2vT2ZxmPwRql0T3zMHLx5t5YtGnvoA==
+"@qnaplus/scraper@^2.0.3":
+  version "2.0.3"
+  resolved "https://registry.npmjs.org/@qnaplus/scraper/-/scraper-2.0.3.tgz#042d5192dd3b7240974a679fbbcce9c5adb08e89"
+  integrity sha512-67UL98BtRjcFqHfQjb0q6fc07bEW1erhrOIMUcJRoSdqGZEdWqs44inK1jDt7Nl5+1tGxfmM4dUVNE7/qU4MLA==
   dependencies:
     "@crawlee/core" "^3.11.5"
     cheerio "^1.0.0"
