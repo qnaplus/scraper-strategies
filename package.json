@@ -10,18 +10,18 @@
     "license": "GPL-3.0",
     "scripts": {
         "build": "tsc",
-        "build:clean": "yarn clean && yarn build",
+        "build:clean": "pnpm clean && pnpm build",
         "clean": "rimraf dist",
-        "reset": "yarn clean && rimraf node_modules",
+        "reset": "pnpm clean && rimraf node_modules",
         "lint": "eslint src/**",
-        "lint:fix": "yarn lint --fix",
-        "neat": "yarn lint:fix && yarn pretty",
+        "lint:fix": "pnpm lint --fix",
+        "neat": "pnpm lint:fix && pnpm pretty",
         "pretty": "prettier . --write",
         "pretty:check": "prettier . --check"
     },
     "dependencies": {
         "@qnaplus/node-curl-impersonate": "^1.0.0",
-        "@qnaplus/scraper": "^2.0.3",
+        "@qnaplus/scraper": "^3.0.0",
         "cycletls": "^1.0.27",
         "form-data": "^4.0.1",
         "header-generator": "^2.1.62",
@@ -37,10 +37,15 @@
         "typescript-eslint": "^8.9.0"
     },
     "volta": {
-        "node": "20.11.0",
-        "yarn": "1.22.22"
+        "node": "22.14.0",
+        "pnpm": "10.6.2"
     },
     "files": [
         "dist"
-    ]
+    ],
+    "pnpm": {
+        "onlyBuiltDependencies": [
+            "canvas"
+        ]
+    }
 }

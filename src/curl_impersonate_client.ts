@@ -42,6 +42,11 @@ export class CurlImpersonateScrapingClient extends FetchClient<FetchClientRespon
         return latestResponse;
     }
 
+    async buffer(): Promise<ArrayBufferLike | null> {
+        // TODO: implement reading response buffer
+        return null;
+    }
+
     teardown(): Promise<void> | void {}
 
     private async doPresetRequest<T extends BrowserType>(url: string, preset: RequestPreset<T>): Promise<CurlResultOk> {
