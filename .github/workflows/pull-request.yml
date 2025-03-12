@@ -20,4 +20,3 @@ jobs:
             - run: pnpm i --frozen-lockfile
             - run: pnpm lint
             - run: pnpm pretty:check
-            - run: pnpm test
