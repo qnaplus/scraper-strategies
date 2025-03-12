@@ -16,19 +16,18 @@ export class CycleTLSScrapingClient extends FetchClient<CycleTLSResponse> {
     }
 
     async fetch(url: string): Promise<CycleTLSResponse> {
-        const client = CycleTLSScrapingClient.client;
-        const headerGenerator = new HeaderGenerator();
-        const options = {
-            headers: headerGenerator.getHeaders(),
-            ja3: "771,4865-4867-4866-49195-49199-52393-52392-49196-49200-49162-49161-49171-49172-51-57-47-53-10,0-23-65281-10-11-35-16-5-51-43-13-45-28-21,29-23-24-25-256-257,0"
-        };
-        const response = await client.get(url, options);
+        const response = await this.getResponse(url);
         return {
             body: response.body as string,
             ok: response.status === 200,
             url: response.finalUrl,
             status: response.status
         };
+    }
+
+    async buffer(): Promise<ArrayBufferLike | null> {
+        // TODO: implement reading response buffer
+        return null;
     }
 
     static async initialize(logger?: Logger): Promise<void> {
@@ -55,5 +54,16 @@ export class CycleTLSScrapingClient extends FetchClient<CycleTLSResponse> {
         return CycleTLSScrapingClient.client.exit().then(() => {
             CycleTLSScrapingClient.initialized = false;
         });
+    }
+
+    private async getResponse(url: string) {
+        const client = CycleTLSScrapingClient.client;
+        const headerGenerator = new HeaderGenerator();
+        const options = {
+            headers: headerGenerator.getHeaders(),
+            ja3: "771,4865-4867-4866-49195-49199-52393-52392-49196-49200-49162-49161-49171-49172-51-57-47-53-10,0-23-65281-10-11-35-16-5-51-43-13-45-28-21,29-23-24-25-256-257,0"
+        };
+        const response = await client.get(url, options);
+        return response;
     }
 }

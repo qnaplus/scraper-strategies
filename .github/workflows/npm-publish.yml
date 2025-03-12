@@ -12,13 +12,16 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
+            - uses: pnpm/action-setup@v4
+              with:
+                  version: 10
             - uses: actions/setup-node@v3
               with:
-                  node-version: 20.11.0
+                  node-version: 22.14.0
                   registry-url: https://registry.npmjs.org/
-            - run: yarn install --frozen-lockfile
-            - run: yarn clean
-            - run: yarn build
+            - run: pnpm i --frozen-lockfile
+            - run: pnpm clean
+            - run: pnpm build
             - run: npm publish --access public
               env:
                   NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
