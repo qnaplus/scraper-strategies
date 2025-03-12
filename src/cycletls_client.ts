@@ -27,7 +27,7 @@ export class CycleTLSScrapingClient extends FetchClient<CycleTLSResponse> {
 
     async buffer(): Promise<ArrayBufferLike | null> {
         // TODO: implement reading response buffer
-        return null
+        return null;
     }
 
     static async initialize(logger?: Logger): Promise<void> {
